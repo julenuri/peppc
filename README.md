@@ -4,7 +4,7 @@ This is a fork of [Retro68](https://github.com/autc04/Retro68)'s GCC 9.1, heavil
 
 ## Known bugs
 
-* `-O2` and higher is broken, without disabling problematic optimisations: `-fno-align-functions -fno-align-labels -fno-align-jumps -fno-align-loops` 
+* `-O2` and higher is broken, without disabling problematic optimisations: at least `-fno-align-functions -fno-align-labels -fno-align-jumps -fno-align-loops` 
 * No SEH support
 * Function prologues + epilogues / stack frames are technically not correct for PPC NT, this only really causes issues with some exceptions in kernel mode leading to `PANIC_STACK_SWITCH` bugcheck (instead of the correct one) due to exception handling related code in NT itself raising an exception
  * C++ support is completely untested.
