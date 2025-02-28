@@ -31,7 +31,7 @@ make install
 
 Compile, assemble, link like so:
 ```
-powerpcle-ppc-winnt-gcc -S -O1 -o - file.c | powerpcle-ppc-winnt-cpp - -P -w -o file.asm # add compiler switches as appropriate
+powerpcle-pe-winnt-gcc -S -O1 -o - file.c | powerpcle-pe-winnt-cpp - -P -w -o file.asm # add compiler switches as appropriate
 pasm.exe -o file.obj file.asm # ran through wine if needed
 link.exe /OUT:file.exe file.obj libs... # ran through wine if needed
 ```
