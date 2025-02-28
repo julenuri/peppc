@@ -20,8 +20,7 @@ mkdir peppc-build
 mkdir peppc-build/gcc-build
 mkdir peppc-build/toolchain
 cd peppc-build/gcc-build
-../../peppc/configure --target=powerpcle-pe-winnt --prefix=/e/peppc-build/toolchain --
-enable-languages=c,c++ --disable-libssp --disable-lto --src=../../peppc MAKEINFO=missing
+../../peppc/configure --target=powerpcle-pe-winnt --prefix=$PWD/../toolchain --enable-languages=c,c++ --disable-libssp --disable-lto --src=../../peppc MAKEINFO=missing
 make # add -j as appropriate
 # libgcc build will fail, this is expected.
 cd gcc
